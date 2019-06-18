@@ -1,0 +1,4 @@
+baseURL = "http://knum.mimuw.edu.pl/"
+languageCode = "pl-PL"
+title = "Koło Naukowe Uczenia Maszynowego"
+theme = "knum-theme"
