@@ -1,0 +1,99 @@
+/* Default styles for phones and tablets (vertical) */
+
+:root {
+    --color-black: #000;
+    --color-white: #fdfdfd;
+    --color-grey: #aaa;
+    --size-8th: calc(100vh / 8);
+    --size-16th: calc(100vh / 16);
+}
+
+/* Grid definition */
+div#container {
+    size: inherit;
+    padding: 0 calc(100vh / 16);
+    /* display: grid;
+    grid-template-columns: repeat(8, [col-start] 1fr);;
+    grid-column-gap: 0;
+    grid-template-rows: repeat(16, [col-start], minmax(min-content, 1fr));
+    grid-row-gap: calc(100vh / 32); */
+    /* TODO: Grid needs to be tested before its eventually used */
+}
+
+/* General setup of color and visuals */
+body {
+    font-family: Jost !important;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+}
+
+/* Content-specific styles */
+img#logo {
+    margin: var(--size-8th) auto 0 auto;
+}
+
+h1#main-title {
+    margin: var(--size-16th) auto;
+    font-size: 0.67rem;
+    letter-spacing: 0.33rem;
+    text-align: center;
+}
+
+p.one-liner {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-grey);
+}
+
+.contact-info {
+    margin: var(--size-8th) auto 0 auto;
+    font-size: 1rem;
+    text-align: center;
+}
+
+img.social {
+    max-height: var(--size-8th);
+    display: inline-block;
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+    padding: 0;
+    margin: 0 calc(100vh/64);
+}
+
+/* Bigger devices */
+
+@media only screen and (min-width: 768px) and (max-height: 576px) {
+    /* Phones and small tablets, horizontal */
+}
+
+@media only screen and (min-width: 768px) and (min-height: 576px) {
+    /* Laptops, PCs and large tablets, horizontal */
+    div#container {
+        padding: 0 var(--size-8th);
+        /* grid-template-columns: repeat(16, [col-start] 1fr);;
+        grid-column-gap: calc(100vw / 32);
+        grid-template-rows: repeat(9, [col-start], minmax(min-content, 1fr));
+        grid-row-gap: calc(100vh / 18); */
+        /* TODO: Grid needs to be tested before its eventually used */
+    }
+
+    img#logo {
+        margin: var(--size-8th) auto 0 auto;
+        width: calc(2* var(--size-8th));
+        height: calc(2* var(--size-8th));
+    }
+
+    h1#main-title {
+        margin: var(--size-16th) auto;
+        font-size: 1.33rem;
+        letter-spacing: 0.67rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <img src=" {{ .Params.Logo }} " alt="KNUM Logo"
+            height="128" width="128"
+            id="logo">
+    <h1 id="main-title"> {{ .Title }} </h1>
+    <p class="one-liner">
+        Strona w budowie
+        <br>
+        Website under construction
+    </p>
+
+    <div class="contact-info">
+        <a href="https://www.facebook.com/KNUM.MIMUW/">
+            <img src="/svg/iconmonstr-facebook.svg" alt="KNUM Facebook"
+                    height="32" width="32" class="social">
+        </a>
+        <a href="https://linkedin.com/company/knum-mimuw">
+            <img src="/svg/iconmonstr-linkedin.svg" alt="KNUM LinkedIn"
+                    height="32" width="32" class="social">
+        </a>
+        <a href="https://github.com/knum-mimuw/">
+            <img src="/svg/iconmonstr-github.svg" alt="KNUM Github"
+                    height="32" width="32" class="social">
+        </a>
+        <br>
+        <a href="mailto:knum@mimuw.edu.pl">
+            knum@mimuw.edu.pl
+        </a>
+    </div>
+{{ end }}
