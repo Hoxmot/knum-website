@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    <div class="content">
+        <div class="hlist">
+            {{ range .Site.RegularPages }}
+                    <a href="{{.Permalink}}" class="btn">{{.Title}}</a>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

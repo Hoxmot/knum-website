@@ -4,8 +4,11 @@
     --color-black: #000;
     --color-white: #fdfdfd;
     --color-grey: #aaa;
+    --color-accent: #851810;
     --size-8th: calc(100vh / 8);
     --size-16th: calc(100vh / 16);
+    --size-32th: calc(100vh / 32);
+    --size-64th: calc(100vh/64);
 }
 
 /* Grid definition */
@@ -46,14 +49,37 @@ h1#main-title {
     text-align: center;
 }
 
-p.one-liner {
+div.content {
+    margin: var(--size-16th) auto 0 auto;
+    /* margin-bottom: var(--size-32th); */
+}
+
+div.content p {
     font-size: 1rem;
     text-align: center;
     color: var(--color-grey);
 }
 
+div.content div.hlist {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+div.hlist > a.btn {
+    display: block;
+    width: fit-content;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
 .contact-info {
-    margin: var(--size-8th) auto 0 auto;
+    margin: var(--size-16th) auto 0 auto;
     font-size: 1rem;
     text-align: center;
 }
@@ -64,7 +90,7 @@ img.social {
     -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
     filter: invert(100%);
     padding: 0;
-    margin: 0 calc(100vh/64);
+    margin: 0 var(--size-64th);
 }
 
 /* Bigger devices */
